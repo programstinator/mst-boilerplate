@@ -1,0 +1,4 @@
+node_modules/**
+sonarqube-scanner.js
+jest.setup.js
+e2e-tests/**

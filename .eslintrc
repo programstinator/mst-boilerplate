@@ -1,0 +1,40 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12
+  },
+  "plugins": ["prettier", "react", "react-hooks", "@typescript-eslint"],
+  "rules": {
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-debugger": "warn",
+    "react/display-name": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-prototype-builtins": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ]
+}
