@@ -1,0 +1,9 @@
+{
+  "endOfLine": "auto",
+  "files": "*.{js, jsx, ts, tsx, css, sass, scss, json, html}",
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true,
+  "htmlWhitespaceSensitivity": "strict"
+}
