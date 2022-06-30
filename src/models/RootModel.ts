@@ -1,10 +1,10 @@
 import { IAnyModelType, Instance, types } from 'mobx-state-tree';
-import { PageModel, PageType, RouterModel } from '../internal';
+import { LoginModel, PageModel, PageType, RouterModel } from '../internal';
 
 export const RootModel: IAnyModelType = types
   .model('Root', {
     router: RouterModel,
-    pages: types.map(PageModel),
+    pages: types.optional(types.map(types.union(PageModel, LoginModel)), {}),
   })
   .actions((self) => {
     return {
@@ -17,6 +17,13 @@ export const RootModel: IAnyModelType = types
       },
       addPage(page: PageType) {
         self.pages.put(page);
+      },
+    };
+  })
+  .views((self) => {
+    return {
+      get currentPage() {
+        return self.pages.get(self.router.currentView.id);
       },
     };
   });

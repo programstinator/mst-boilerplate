@@ -53,7 +53,7 @@ export const PageRoutes: IPageRoutes = {
     id: PageIds.Login,
     path: '/login',
     component: <LoginPage />,
-    isAuthenticationRequired: false,
+    isAuthenticationRequired: 'both',
     extension: LoginModel,
   },
   Home: {

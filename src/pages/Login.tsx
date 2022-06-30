@@ -3,7 +3,15 @@ import { useMst } from '../internal';
 
 export const LoginPage = observer(() => {
   const {
+    currentPage,
     router: { currentView },
   } = useMst();
-  return <>{currentView.id}</>;
+  return (
+    <>
+      {currentPage?.myNumber}
+      <br />
+      {currentPage?.squared}
+      <button onClick={currentPage?.increase}> + </button>
+    </>
+  );
 });
