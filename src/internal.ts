@@ -1,6 +1,7 @@
 export * from './models/FunctionModel';
 export * from './models/ComponentModel';
 export * from './models/PageModel';
+export * from './models/LoginModel';
 export * from './utils/PageRoutes';
 export * from './models/ViewModel';
 export * from './models/RouterModel';

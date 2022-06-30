@@ -1,5 +1,6 @@
-import { ViewType } from '../internal';
+import { ViewType, LoginModel } from '../internal';
 import { LoginPage } from '../pages/Login';
+import { HomePage } from '../pages/Home';
 
 type HookType = (
   view: ViewType,
@@ -52,13 +53,14 @@ export const PageRoutes: IPageRoutes = {
     id: PageIds.Login,
     path: '/login',
     component: <LoginPage />,
-    isAuthenticationRequired: 'both',
+    isAuthenticationRequired: false,
+    extension: LoginModel,
   },
   Home: {
     name: 'Home',
     id: PageIds.Home,
     path: '/',
-    component: <LoginPage />,
+    component: <HomePage />,
     isAuthenticationRequired: 'both',
   },
 };

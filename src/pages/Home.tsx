@@ -5,5 +5,5 @@ export const HomePage = observer(() => {
   const {
     router: { currentView },
   } = useMst();
-  return <>{currentView.id}</>;
+  return <div>Nikola</div>;
 });

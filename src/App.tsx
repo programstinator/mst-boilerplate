@@ -11,18 +11,6 @@ const App = observer(() => {
   } = root;
   return (
     <div className="App">
-      {!isCurrentViewLogin && (
-        <button onClick={() => navigate({ newView: PageIds.Login })}>
-          {' '}
-          go to login{' '}
-        </button>
-      )}
-      {!isCurrentViewHome && (
-        <button onClick={() => navigate({ newView: PageIds.Home })}>
-          {' '}
-          go to home{' '}
-        </button>
-      )}
       <StateRouter />
     </div>
   );
